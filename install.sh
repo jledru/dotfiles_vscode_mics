@@ -37,6 +37,9 @@ fi
 
 # Create a new .zshrc file with the specified settings
 cat << 'EOF' > "$HOME/.zshrc"
+# Set ZSH variable to the Oh My Zsh installation path
+export ZSH="$HOME/.oh-my-zsh"
+
 # Enable Powerlevel10k theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
