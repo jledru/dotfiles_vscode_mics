@@ -75,7 +75,7 @@ export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.zsh_histo
 EOF
 
 # Set Zsh as the default shell
-chsh -s $(which zsh)
+sudo chsh $USERNAME -s $(which zsh)
 
 # Source the new .zshrc in the current shell
 source "$HOME/.zshrc"
