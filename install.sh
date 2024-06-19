@@ -65,6 +65,9 @@ fi
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+# to keep container history
+export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.zsh_history
+
 # Other settings can be added here
 EOF
 
