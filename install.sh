@@ -30,6 +30,12 @@ for plugin in "${plugins[@]}"; do
   fi
 done
 
+# Backup existing .p10k.zsh if it exists and copy versioned one
+if [ -f "$HOME/.p10k.zsh" ]; then
+  mv "$HOME/.p10k.zsh" "$HOME/.p10k.zsh.bak"
+fi
+cp "./.p10k.zsh" "$HOME/.p10k.zsh"
+
 # Backup existing .zshrc if it exists
 if [ -f "$HOME/.zshrc" ]; then
   mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
